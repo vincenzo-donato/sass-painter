@@ -1,0 +1,79 @@
+// STYLE FOOTER GENERAL 
+footer{
+    background-color: $black;
+    // style container top 
+    .container .top-footer {
+        background-color: $colorBack;
+        height: 300px;
+        padding: calc(#{$padding-10} * 5) 0px;
+        @include flexBox(space-around);
+        h3{
+            margin-bottom: $margin-10;
+        }
+        ul li{
+            margin-bottom: 5px;
+            &:hover{
+                text-decoration: $textDecoration;
+                cursor: pointer;
+            }
+        }
+    }
+    .link-social{
+        position: absolute;
+        margin: 20px 0px;
+        i{
+            font-size: 30px;
+            margin-right: $margin-10;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+        .inst{
+            color: $purple;
+        }
+        .face{
+            color: blue;
+        }
+        .you{
+            color: rgb(255, 0, 0);
+        }
+        .twit{
+            color: lightseagreen;
+        }
+        .link{
+            color: $colorIcons;
+        }
+    }
+    // end style container top 
+
+    // style container bottom 
+    .container .bottom-footer{
+        width: 95%;
+        margin: auto;
+        @include flexBox();
+        height: $h-100px;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: $black;
+        .box-left img{
+            margin: 0px 20px;
+            &:hover{
+                cursor: pointer;
+                opacity: 0.5;
+            }
+        }
+        .box-right{
+            color: $white;
+            span{
+                margin-right: 20px;
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: $textDecoration $white;
+                }
+            }
+        }
+    }
+    //end style container bottom 
+
+}
+// END STYLE FOOTER GENERAL 

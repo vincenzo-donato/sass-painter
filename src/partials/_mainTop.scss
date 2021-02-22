@@ -1,0 +1,41 @@
+// STYLE MAIN TOP 
+.top-course{
+    @include flexBox(center);
+
+    // style course top 
+    .course{
+        width: 375px;
+        margin: 0px 20px;
+        @include box();
+        img{
+            height: 192px;
+        }
+        .box{
+            padding: $padding-20;
+        }
+        h2{
+            text-align: left;
+            font-size: 25px;
+            margin: $margin-10 0px
+        }
+        span{
+            color: $colorIcons;
+        }
+        p{
+            font-size: 20px;
+        }
+        #lear{
+            color: $colorIcons;
+            margin: $margin-10 0px;
+        }
+        &:hover{
+            cursor: pointer;
+            #lear{
+                text-decoration: $textDecoration $colorIcons;
+            }
+        }
+    }
+    //end style course top 
+
+}
+//END STYLE MAIN TOP 

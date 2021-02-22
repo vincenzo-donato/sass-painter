@@ -1,0 +1,12 @@
+// MIXINS FLEX BOX 
+@mixin  flexBox($justify: flex-start, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// MIXINS BOX
+@mixin box(){
+    background-color: $white;
+    // padding: $padding-20;
+}

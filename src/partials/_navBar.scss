@@ -1,0 +1,106 @@
+// STYLE NavBar General
+.nav ul {
+    @include flexBox();
+    // STYLE Lista generali 
+    li{
+        padding: $padding-10;
+        margin-right: calc(#{$margin-10} * 2);
+        cursor: pointer;
+
+        // ul li nav hover
+        &:hover{
+            text-decoration: $textDecoration $black;
+        }
+       // ul li  nav hover fine
+
+       // STYLE Lista span generali 
+        span{
+            color: $white;
+        }
+       // STYLE Lista span generali fine
+
+       // STYLE Lista i top 
+        i{
+            color: $colorIcons;
+        }
+       // STYLE Lista i top fine
+
+    }
+
+}
+
+// NavBar top 
+.top ul{
+    @include flexBox(flex-end);
+    line-height: calc(#{$h-100px} / 2);
+    // li nav top hover 
+    li:hover{
+        text-decoration: $textDecoration $white;
+    }
+    // li nav top hover fine
+
+}
+
+// NavBar Bottom
+.bottom{
+    @include flexBox();
+
+    // ul nav bottom 
+    ul{
+        @include flexBox(space-around);
+    }
+    // ul nav bottom fine
+    
+    // li nav bottom 
+    li{
+        position: relative;
+        padding-right: calc(#{$padding-10} * 2);
+        
+        // ul of li nav bottom 
+        ul{
+            width: 150px;
+            position: absolute;
+            @include flexBox();
+            flex-direction: column;
+            align-items: center;
+            display: none;
+            background-color: $white;
+            margin-left: -10px;
+            margin-top: $margin-10;
+            
+            // li of this ul 
+            li i{
+                color: black;
+                float: right;
+            }
+            // li of this ul fine
+
+        }
+        // ul of li nav bottom fine
+        
+        // Hover li nav bottom
+        &:hover{
+            background-color: $white;
+            text-decoration: $textDecoration $white;
+            
+            // span li nav bottom  hover
+            span{
+                color: $black;
+            }
+            // span li nav bottom fine hover
+
+            // ul of li nav bottom hover
+            ul{
+                display: block;
+            }
+            // ul of li nav bottom hover fine
+
+        }
+        // Hover li nav bottom
+
+    }
+    // li nav bottom fine
+
+}
+// NavBar Bottom fine
+

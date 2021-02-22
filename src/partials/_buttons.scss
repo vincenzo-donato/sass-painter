@@ -1,0 +1,28 @@
+// BTN JUMBO 
+.jumbotron{
+
+    button{
+        padding: 10px calc(#{$padding-10} * 2);
+        background-color: rgba(244, 165, 96, 0);
+        color: $black;
+    }
+
+    #left{
+        background-color: $black;
+        color: $white;
+        margin-right: 10px;
+    }
+
+}
+// BTN JUMBO END 
+
+// BTN MAIN BOTTOM 
+main .container .bottom .box .text-box button{
+    padding: $padding-10 $padding-20;
+    border: 0;
+    &:hover{
+        cursor: pointer;
+        background-color: lightgrey;
+    }
+}
+// BTN MAIN BOTTOM END

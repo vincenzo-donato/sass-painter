@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- COLLEGAMENTO FOGLIO DI STYLE  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- COLLEGAMENTO FONT AWESOME  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- LINK: Vue JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- CONTAINER: Container general for vue -->
+    <div id="container-general">
+
+        <!-- CONTAINER: Header  -->
+        <header>
+
+            <!-- Box nav header general  -->
+            <div class="container-nav">
+                
+                <!-- Header nav top  -->
+                <div class="top nav">
+
+                    <ul>
+                        
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>1-877-582-6735</span> 
+                        </li>
+
+                        <li>
+                            <i class="fas fa-comment-alt"></i> 
+                            <span>Chat</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-user"></i> 
+                            <span>Sign in</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-shopping-cart"></i> 
+                            <span>Cart</span> 
+                        </li>
+
+                        <li>
+                            <select name="" id="">
+                                <option value="Italiano">Italiano</option>
+                                <option value="English">English</option>
+                                <option value="Español">Español</option>
+                            </select>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!--End Header nav top  -->
+
+                <!-- Header nav bottom -->
+                <div class="bottom nav">
+                    <div>
+                        <img src="https://www.painterartist.com/static/ptr/images/logo_painter.png" alt="">
+                    </div>
+                        <ul>
+                            <li> 
+                                <span>Products</span> 
+                                <i class="fas fa-angle-down"></i> 
+                                <ul>
+                                    <li> <span>Digital</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Licensing</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Mobile</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Wacom</span>  <i class="fas fa-angle-right"></i></li>
+                                </ul>
+                            </li>
+                            
+                            <li> 
+                                <span>Brushes</span>  
+                                <i class="fas fa-angle-down"></i>
+                                <ul>
+                                    <li> <span>Digital</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Licensing</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Mobile</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Wacom</span>  <i class="fas fa-angle-right"></i></li>
+                                </ul>   
+                            </li>
+                            
+                            <li> 
+                                <span>Wacom Tablts</span> 
+                            </li>
+                            
+                            <li> 
+                                <span>Spacial Offers</span> 
+                            </li>
+                            
+                            <li> 
+                                <span>Free Trials</span> 
+                            </li>
+                            
+                            <li> 
+                                <span>Business</span> 
+                            </li>
+                            
+                            <li> 
+                                <span>Support</span> 
+                                <i class="fas fa-angle-down"></i>
+                                <ul>
+                                    <li> <span>Digital</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Licensing</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Mobile</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Wacom</span>  <i class="fas fa-angle-right"></i></li>
+                                </ul>
+                            </li>
+                            
+                            <li> 
+                                <span>Learning</span> 
+                                <i class="fas fa-angle-down"></i>
+                                <ul>
+                                    <li> <span>Digital</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Licensing</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Mobile</span>  <i class="fas fa-angle-right"></i></li>
+                                    <li> <span>Wacom</span>  <i class="fas fa-angle-right"></i></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+                <!--End Header nav bottom -->
+
+            </div>
+            <!--End Box nav header general  -->
+
+            <!-- Jumbotron header  -->
+            <div class="jumbotron">
+                <div class="title">
+                    <h1>Painter</h1>
+                    <span>©</span>
+                    <h3>2021</h3>
+                </div>
+                <p>The most realistic painting experience you'll find hard to resist</p>
+                <strong>Limited-time offer</strong>
+                <p class="colored">Get Signature Style Brush Pack Bundle FREE (Worth $ 179.99)</p>
+                <button id="left">LEARN MORE</button>
+                <button id="rigth">DOWNLOAD TRIAL</button>
+            </div>
+            <!--End Jumbotron header  -->
+
+        </header>
+        <!--END CONTAINER: Header  -->
+
+        <!-- CONTAINER: Main  -->
+        <main>
+
+            <!-- Box container main general  -->
+            <div class="container">
+                
+                <!-- Title container main -->
+                <h2>More painting possibilities</h2>
+                <!-- Title container main end -->
+
+                <!-- Main top  -->
+                <div class="top-course">
+                    <div v-for='course in courseMainTop' class="course">
+                        <img :src="course.img" alt="">
+                        <div class="box">
+                            <h2><span>{{course.type}}</span> {{course.title}}</h2>
+                            <p>{{course.info}}</p>
+                            <p id="lear">{{course.link}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End Main top  -->
+                
+                <!-- Main bottom  -->
+                <div class="bottom-course">
+                    
+                    <!-- Box general first  -->
+                    <div class="box first">
+
+                        <!-- Box for text  -->
+                        <div class="text-box">
+                            <h2>Waicom + Painter 2021</h2>
+                            <p>Satisfy all your digital painting needs with the power and precision of these award-winning bundles.</p>
+                            <button>LEARN MORE</button>
+                        </div>
+                        <!-- End box for text  -->
+
+                        <!-- Box for img  -->
+                        <div class="first-box-img ">
+                            <img class="first-img" src="https://www.painterartist.com/static/ptr/images/home/wacom.png" alt="">
+                            <p>Youki Matsumoto</p>
+                        </div>
+                        <!-- End Box for img  -->
+
+                    </div>
+                    <!--End Box general first  -->
+
+                    <!-- Box general second  -->
+                    <div class="box second">
+                        
+                        <!-- Box for img  -->
+                        <div class="second-box-img">
+                            <p>Don Seegmiller</p>
+                        </div>
+                        <!-- End Box for img  -->
+
+                        <!-- Box for text  -->
+                        <div class="text-box grey">
+                            <h2>Painter Masters</h2>
+                            <p>Gain inspiration and knowledge from professional artist who have mastered Painter, and excel in their craft.</p>
+                            <button>LEARN MORE</button>
+                        </div>
+                        <!-- End box for text  -->
+
+                    </div>
+                    <!--End Box general second  -->
+
+                    <!-- Box general third  -->
+                    <div class="box">
+
+                        <!-- Box for text  -->
+                        <div class="text-box third">
+                            <h2>Business & Education</h2>
+                            <p>Save money on our award-winning painting software thanks to affordable and flexible licensing options.</p>
+                            <button>LEARN MORE</button>
+                        </div>
+                        <!-- End box for text  -->
+
+                        <!-- Box for img  -->
+                        <div class="third-img">
+                        </div>
+                        <!-- End Box for img  -->
+
+                    </div>
+                    <!--End Box general third  -->
+
+                </div>
+                <!--End Main bottom  -->
+
+            </div>
+            <!--End Box container main general  -->
+
+        </main>
+        <!--END CONTAINER: Main  -->
+
+        <!-- CONTAINER: Footer  -->
+        <footer>
+            
+            <!-- Box footer general  -->
+            <div class="container">
+                
+                <!-- Footer top  -->
+                <div class="top-footer">
+
+                    <!-- primo box  -->
+                    <div class="box-ul-footer">
+
+                        <!-- prima ul testo  -->
+                        <h3>Products</h3>
+                        <!-- prima ul testo fine  -->
+
+                        <!-- prima ul  -->
+                        <ul>
+                            <li>Corel Painter</li>
+                            <li>ParticleShop</li>
+                            <li>Painter</li>
+                            <li>Special</li>
+                            <li>Free</li>
+                            <li>All products</li>
+                        </ul>
+                        <!-- prima ul fine  -->
+
+                    </div>        
+                    <!-- primo box fine -->
+
+                    <!-- secondo box  -->
+                    <div class="box-ul-footer">
+
+                        <!-- seconda ul testo  -->
+                        <h3>Quick Links</h3>
+                        <!-- seconda ul testo fine  -->
+
+                        <!-- seconda ul  -->
+                        <ul>
+                            <li>Corel Painter</li>
+                            <li>ParticleShop</li>
+                            <li>Painter</li>
+                            <li>Special</li>
+                            <li>Free</li>
+                            <li>All products</li>
+                        </ul>
+                        <!-- seconda ul fine  -->
+
+                    </div>
+                    <!-- secondo box fine -->
+
+                    <!-- terzo box -->
+                    <div class="box-ul-footer">
+
+                        <!-- terza ul testo  -->
+                        <h3>Support</h3>
+                        <!-- terza ul testo fine  -->
+
+                        <!-- terza ul  -->
+                        <ul>
+                            <li>Corel Painter</li>
+                            <li>ParticleShop</li>
+                            <li>Painter</li>
+                            <li>Special</li>
+                            <li>Free</li>
+                            <li>All products</li>
+                        </ul>
+                        <!-- terza ul fine  -->
+
+                    </div>
+                    <!-- terzo box fine-->
+
+                    <!-- quarto box  -->
+                    <div class="box-ul-footer">
+
+                        <!-- quarta ul testo  -->
+                        <h3>About Corel</h3>
+                        <!-- quarta ul testo fine  -->
+
+                        <!-- quarta ul  -->
+                        <ul>
+                            <li>Corel Painter</li>
+                            <li>ParticleShop</li>
+                            <li>Painter</li>
+                            <li>Special</li>
+                            <li>Free</li>
+                            <li>All products</li>
+                        </ul>
+                        <!-- quarta ul fine  -->
+                        <div class="link-social">
+                            <i class="fab fa-instagram inst"></i>
+                            <i class="fab fa-facebook-square face"></i>
+                            <i class="fab fa-youtube-square you"></i>
+                            <i class="fab fa-twitter-square twit"></i>
+                            <i class="fab fa-linkedin link"></i>
+                        </div>
+                    </div>
+                    <!-- quarto box  fine -->
+
+                </div>
+                <!--End Footer top  -->
+
+                <!-- Footer bottom  -->
+                <div class="bottom-footer">
+                    <div class="box-left">
+                        <img src="https://www.painterartist.com/static/ptr/corelAdvantage.png" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAPvUlEQVR4nO1cCVhV1RY+afXqmaa9epVmg6+ybJZEG18qPcs0sySnBqdQczYEZ00ccCwH1IsTjigo4vRUUBHngRxScEQEBxQFBVFA0PXWv87ZcLxcBu815BX7+9Z3zt5nT2f9a6/pXNC0H3w0g15913vJxh/mhCW6B27N6B+8M73f0h0ZRUFYq7pXQNZDnX1v/pmpTGffG8znFBOdZPJhqpaNg3FTp9rABZdHrdlDqenX6W6Ur6asId7HX5kaK0CqVerld/p4wmW7mZl2PYsyb9xwCJBmviF3myHFgV7VXhu8cN6c7YftZuS+UxfIbW6YQ2CUAJJNwVrb2Rvism7ctJuRT3vOpr91nFoCyJ2hJK3DvI1265qJG37Pnsx5eCAdOXepBBDHKF1jdZNpDwOjziblmvDBHy3kt80+9VcCiFAKALHLreq8YFOeE3ecF063qwZLAHEQkM8mrMx3cnajKSHlWgkgt0ESp9gLSBu/DQUu8MGooKIBpN0knQrbXkypbBdfshuQDYdPF2qRHSfOOQ7Ij1NJcx1F2ic/k9Z6Amkdpuj0/XjSPvMi7fNhpDUYSlrjEXrfVtynvtGO51+P5rbx+nhFaG87Se9rbgd980vOeqD6Q0hrOoa0ThZ9fbQ1G6OvaR7XcKi+VmHmw3i8g1vOeyKatxsQlHGh+woEZPTavY4B4jaZtK9GUs3hi2nw8l06Q0DNx8rLd1u4mbbFXqCgPdHUYPwKHZQmI8k9cCttj7tAARHHyWnwQnqsx0waxONns9Phv/cEdfFnG9hwGJXvOl3mhTPi/9tx8t91jJx4rXe9l9DINXvIf1+MXB/vMYO0ugOooruf9P9g1FIat/EgWcIPSn3mlkM0OuwA1R23TOrzdx4h/wjb841Y/Rs92m26LhTtp9wZQC5cSZPrjC1RVLr95DwBWbE/xjFA2jHVHUj7T12Ufk3Rr84A0r70piB+YZRDx+PliheB5M1i5qBEHTsr1wPsjjecuEruUzOu04XEFLn/ZfUeet9Qq4mp6RTDnuPJC8n0yeiltOnoGf09uU2VqqxSynaZJveDlu2iHVGnsp/dvHmTtkbGke+mSKmfvpRKMbxurvnic+arPTSAtEbDdaFzFJDn+82jfkt3yP2x85dFgq2ZWZmDxsIWm4Bgo7zh14cG8gsTRTMj45KukFbLg5rPXCfjvpmxjrQavagU932OA9RWczdK+xeT/0tazV50H6uFF5iJDQxARH3c9xV5Ltku9a58wlDKQ2Lf66OrHabktAxdLTv1lJN4ihmckH6dXhowX/oDYO2FjlR7TLDUK/XyI61aJ+q1eJu+TotxuuDYmK8Uq7/z7PBkcb9SOOlQvY4AgqNnTECBhpSidF+05RaGrj902nFAPh5EEbEJFBIVR6XaTJS+ZViXT2Z1IS8OWwH7AAa8/ROFG5Io6kDa+YVredLnk3RAxobsozYjFott28PSD1ViLtezbohtQUpoy7F43Q6915tq8RgUD4PhjSYx4G/2EG8TpeqABbJ+61nr857vuDEfC1SzaSH6uCGL5LTbDUjS1fRcjAMQqrSYpjO2Z8CWfGbJXWwCAulhpqoSeTpRru5B27Pnvwf9PuxL2hcj5ERYDJUhxvqjfnr7B32zPb4UllRVANobQxbKPeyhx5ww6uG/mW2WN529fJXWHTrFTO9OWvWeNJBVFEqTqWvk+oUPA1LDXa4or7Gd0t7xkPgMBf09+N7mfG/1kCwHyiPd+WQ2G2s/INujz9nU9W+zWkFZzkYL7tvtFpuA1PuZfML1k+DNhnLGqghauPuY1J1ZRV7KzKJEFpDaHrOpN4MUwVLvPCyQkAuCavuI24es2E1rD8ZRm9kbZNy9bO8aTV4t98/yPt9gCUVpzG1V+cS/zKr4GVZzMRdThIlNB/uTxWCe18qI7Lzd15a1wlhcUd6EpDu7U79gXY07D1tMVXvOtDHfQpphCA0cDDnhjhh1GL+8DLglPJIWMcNC2Lg5DAjr1XuZEPHP2npIXl6r6SGnBqUtM/hZZu755JzgczWvixPhxHr+0tWckzAhZC99wh4Y9PgTP81iSfakNQzSYWbSh+wtJV/LuGUvrXnu/sE75bMCSgbbLy+ua/8ZTE+yl5WSdp1t0krZD66ovzLIX1Rby+khUs9vvnQ2iAOWbGNXerRu0xw16vAkbAHyb/YmLlu9XGFLLkDaTqTSP1ronyxlYvRaT9RdxO9+FduFLLPYCa6/5RVAlfk0wI1FXTwXHlOd2yvC2EIK2VWGhwQJ11qOE0b8q+9c+kf3GfQQn5QKbNQf4XsQ+tzPUl2u6zR6BO4u1v90iIx5gOMcaIB7sRfeI66ow6lAHU4E6lBFec6HPWK+bxmMjnfI7V19MFaXNhMTldd1RwDBC7Yz7AgYAtcaQZSb0SYvM1V/OY5TRNoQlWMc+prb0cYOgYxDMKiCSsNGydVMiHMwXtVxj3UxL8arPlhfxURq3lYTCp4Pa7vlFmiHA8OLqWniTmKyxxmcS6zP7xggILwgpBmMVYQ6GIFIF9EvmIR+YDzqeAaw4M0YJ0UFl8IUBVQ7g4EASj3DHOa1VDQNTw3zIehsZQDxjbEGnAaMzScWKyw5DIgqz/aeIx6EI8UmICxZj8EwDlxANdk9deJASlQFMwtx0AtMwlDu9wzvodpAf4nS0YY45ONfluuSy89fYrcUUfmjrDJwLykOVoMPsFpE/WFWJ1CDr7PRrcEOQw12Dl6B58Qu6d/ZzXZl4/0O76E09tVklJzeL6espjpjg6lUO32NYgMIvAdHSy5A8JINhmZHvqqcSkqlJ1gakSoRFxw+fP0htDvmPB3lALUMn6DfjageJfpiMlVk+4DSfm4YtZgeKveNffQ4AiCjtOL4YU/chVvWWrY/hp5moOKTc94vYG8MPfTtr/I9SH1giOeg8X6cEm4vMkAQ4DzXZ272YBhLSBbS7JAS+OGoS8Rq9EH07hggXuJmp6ZnsocziB5mSUUZwIGpT9gBSuHIWftyhAACZiISbjlPj9SfYiN/P6ur+iODqDyfCpSO/EylUFBKs4pSbmxrP90tnr4liu7j+WCcy7DKC/j9pLSXYlVVicF5230WdTFsJdR0WT6BTaas0eOhto5llm8LELhyrhwUIeKVoCififEc/ZCiL+yvUWwC0nAo+e88SqkZmfQrxxmWzVF07Xomledn/ruOiuTKCWFva/Oxs7T1+Dl6mVUXShLv14ujatH7hqvcjt1PnISEK9coiUGOZLcXnhfm/H7mejrJ9d9iE2hk4FbJRjzPYH0+bpmMPZqYQp1mrpNg07m/nj65yG50PyQpYdfEfk0pOkCsS1dEoDYmRRbVnpIXIIhBAGrYodO0+UCsfLf/jHV5aNQpSeBpLgMlEg87fEZiFsQCFVmSg3YckXkT2Q1/x2uRPAMgiPDP8LinDDW2j08WVF9zXh8JTNwf5uvh+EvUkGMKROlOHGOEG7HVEQYN+3quw1RazkKBcoVPamVeU1L0dwsQRJ5IpCHNjfwO0uDfzlhH0QnJdxQQ5JOQWdZq9xcC0xBejTdsy5PMiAdY9QC00CNnqDL7//VYhWrv96FKHn7SZwJH+1C5bnPCZJ8oABFGX5VGProqm7B+P5+C/uKd3cOeVL0JK6kWG3jYm1ZGngoqswbiHude9J6RC3PF6UFs8UcCArf2UHySGLADpxPZoF7JfnaV1UhG5g1Kz8ySe3OJTbwiYyKZDp5JlOjeLkBYlwcYqRJz+cFvPZVpMS7XJ+KH2djX4eAUJYsBQmQey4JTnSUcpdvCTdQnSM/yigHm06Schu+YoXAYzGXN3hM0yOifzifnBkfYwexMdPTVE4OZ/O7XOPrGiXsMH8ZajP1jARmAdIHVoIZG1nTgstzPehhJxk/xocjqmdfK3bcHCIilFO4tJLkFn77m7CHBBZZ4gQ1uOTbyneaHk8eS7fQ0JBYuL0t1FbYj7sbpfRAxA6sSF7YFcEQQ0eMjkgRmyBAzMHXH6s8Q2SMV0pTXaeq7lurAbWb7g7RI32W75AeB4mbz2i/yvjwYLJy4cp199ZilvWM2pMBPuMpO4GvaLnYrVXodko+vXrhHuhupbPH5uY7fBiM/hPudJ87Ttuh48cRQh86/LUCEmaP1lIgiFdRBIhH1In0in2lHGZ9EJ+v3qh1SizaMRTAHA4x7N2N+BI7qGRwE67WwD1wxFz7ZIujEOq6mNbCPDo6BUShAIGHoCKYiRwXPAzkaGL7eLJV4BrWGekuWKgRnONbI/CLfBHCgVuAWAxR4M7cFyF+MSrlNTs33h3LyDdtqEI41yrBVEbme4RfsKEhlWz8ryPsqAUQoBT8lzZNJ8KLQEVEx1FTEyQSpAyilsvbEXhADjq+DqONDD+KQcuzfw6DDKZD0OT+bZ7iiJYDkSWlau9lheSahlM1AngquJzwt1JtPC6GfV+yWewRTUEubjp6VOrwVGH6kqfHd+BwHb/Ihhp99z88AnrVXVgJINiVrtccEr1tlpAfyOiFmwvcJuLXqhJgJyT64uLYieXy7RmoDduiMDeNeAojQBo2Z+DHbhUzEE9YljhkPyQ9jRiIyRl5JGWb8gQ/SFRuMZ/DCVMEHfTyDGsPp2mtK2iWn2f6AVQKI0IfyJ20svT85Dw/MDDD9gqSoC348UAwYcjepm2b6G0Ptxf7zm9UcvngHe13HRq/de54j2GuW8Mi0oqBpmyPT3h8Z9Kf9o8+y8gM7X/y5RuY9bj5XtJw/+jzPtJypnsJBY+EsoWJEd30DJVQCSLGmu76BErrDgGg5/wkC5GR4DFWs2q3Jkym0gD7exlzeBfS7q1RsADGYHmpy2zyNNjI2a2EKyONF3AoBSGGAzYvUPhQlMbnYMU+08V7FGxDeSAVjs9YMNwOSHxUESGHnyYsqWI2PyEc4/v9PiCE1ETZUlpmRoSbpUupHnSQzIGCWxTSHi5V0o7+T0U+1uZnGqlNqzXC1jwpGP0/T/NHG82hjz55GHzVWnSjSck5WgNWe0J5k4gnGeJr4E1CUgICBlgIAsZiYr17cfEIirBiV3wkxqw5PLUedWawYaQ2IIvNpTDLNpdRqFdOcrqY5ow3Gexr3FUx9nUzPXY17JaRYz7UoAYHERxcSEIt26wlQgOSn283zmJllZraLaY28AKmi5ahXs42zBZbFeK8ALecERpvWsR6ngFKgOhnv46p4U5SAVDEWDzVe2JqRFUzM8rTBeKWyQrVb1YItQCoY471NY5Os1sgL0CqmMdGmuWyNcTGeRZvazCckQsvtZCg+RJgENVt1FRkgxuIu2q16XW3YrE7MqsEskWYbogBzMr2ocp+tmaX0votp3sIAooBw1W61IdZutbVXZV7LbEOU0Ck75mkSVHlmL1//B+vLGxjxGU5uAAAAAElFTkSuQmCC" alt="">
+                        <img src="https://www.painterartist.com/static/ptr/corelAdvantage.png" alt="">
+                    </div>
+                    <div class="box-right">
+                        <span>Terms of Use</span>
+                        <span>Privacy</span>
+                        <span>Cookies</span>
+                        <span></span>
+                        <strong>Copyright © 2021 Corel Corporation. All rights reserved.</strong>
+                    </div>
+                </div>
+                <!--End Footer bottom  -->
+
+            </div>
+            <!--End Box footer general  -->
+
+        </footer>
+        <!-- END CONTAINER: Footer  -->
+
+    </div>
+    <!-- END CONTAINER: Container general for vue -->
+
+    <!-- COLLEGAMENTOPAGINA SCRIPT  -->
+    <script src="js/script.js"></script>
+    <!-- END COLLEGAMENTOPAGINA SCRIPT  -->
+
+</body>
+</html>

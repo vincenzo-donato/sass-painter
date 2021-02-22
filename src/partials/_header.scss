@@ -1,0 +1,9 @@
+// STYLE CSS Header
+header{
+    background-color: $colorBack;
+    .nav{
+        width: 100%;
+        background-color: $black;
+        padding: 0px calc(#{$padding-10} * 10);
+    }
+}

@@ -1,0 +1,90 @@
+// MAIN BOTTOM 
+main .container .bottom-course{
+    @include flexBox(center);
+    flex-direction: column;
+    margin-top: $margin-50;
+    // style h2 main bottom 
+    h2{
+        text-align: left;
+    }
+    // style h2 main bottom fine 
+
+    // style box container course + text course
+    .box{
+        @include flexBox();
+        width: calc(100% - 150px);
+
+        // box style text course 
+        div{
+            width: 50%;
+            height: 330px;
+            p{
+                font-weight: 100;
+                color: $white;
+                margin: $margin-20 0px;
+            }
+        }
+        // style box text course end
+        
+        // style text 
+        .text-box{
+            padding: calc(#{$padding-20} * 4)  calc(#{$padding-20} * 2);
+            h2{
+                color: $white;
+            }
+        }
+        // style text end 
+
+        // style first img course box
+        .first-box-img{
+            padding: 0;
+            background-image: url("https://www.painterartist.com/static/ptr/images/home/wacom-painter.jpg");
+            background-position: center;
+            background-size: 100%;
+            .first-img{
+                width: 450px;
+            }
+            p{
+                padding: $padding-20;
+            }
+        }
+        //style first img course box end 
+
+        // style second box course 
+        .second-box-img{
+            background-image: url("https://www.painterartist.com/static/ptr/images/home/painter-master.jpg");
+            background-size: 100%;
+            p{
+                margin-top: 310px;
+                padding: $padding-20;
+            }
+        }
+        // second img course box end 
+
+        // third img course box
+        .third-img{
+            background-image: url("https://www.painterartist.com/static/ptr/images/home/business-education.jpg");
+            background-size: 100%;
+        }
+        // third img course box end 
+
+    }
+    // style box container course + text course end 
+
+    // style color box 
+    .first{
+        background-color: rgb(59, 1, 118);
+    }
+    
+    .second{
+        background-color: rgb(46, 45, 45);
+    }
+    
+    .third{
+        background-color: rgba(66, 66, 248, 0.85);
+    }
+    // style color box end 
+
+}
+// MAIN BOTTOM END 
+

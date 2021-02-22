@@ -1,0 +1,344 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: #e8e8e8;
+}
+header .nav {
+  width: 100%;
+  background-color: black;
+  padding: 0px calc(10px * 10);
+}
+
+.nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav ul li {
+  padding: 10px;
+  margin-right: calc(10px * 2);
+  cursor: pointer;
+}
+.nav ul li:hover {
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+}
+.nav ul li span {
+  color: white;
+}
+.nav ul li i {
+  color: #009cff;
+}
+
+.top ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: calc(100px / 2);
+}
+.top ul li:hover {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bottom ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bottom li {
+  position: relative;
+  padding-right: calc(10px * 2);
+}
+.bottom li ul {
+  width: 150px;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  background-color: white;
+  margin-left: -10px;
+  margin-top: 10px;
+}
+.bottom li ul li i {
+  color: black;
+  float: right;
+}
+.bottom li:hover {
+  background-color: white;
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+.bottom li:hover span {
+  color: black;
+}
+.bottom li:hover ul {
+  display: block;
+}
+
+header .jumbotron {
+  width: 100%;
+  background-image: url(https://www.painterartist.com/static/ptr/images/home/bg-painter-home.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: calc(80px);
+}
+header .jumbotron .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .jumbotron .title h1 {
+  font-size: 70px;
+}
+header .jumbotron .title span {
+  margin-top: -15px;
+}
+header .jumbotron .title h3 {
+  font-size: 35px;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+header .jumbotron p {
+  width: calc(600px);
+  font-size: 25px;
+  margin: calc(10px * 3) 0px;
+}
+header .jumbotron strong {
+  font-size: 20px;
+  color: #c70cb9;
+}
+header .jumbotron .colored {
+  width: calc(500px);
+  color: #c70cb9;
+  font-size: 17px;
+  margin: 10px 0px 30px;
+}
+
+main .container {
+  background-color: #e8e8e8;
+}
+main .container h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 300;
+  color: #252525;
+  margin: 0px 0px 30px;
+}
+
+.top-course {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-course .course {
+  width: 375px;
+  margin: 0px 20px;
+  background-color: white;
+}
+.top-course .course img {
+  height: 192px;
+}
+.top-course .course .box {
+  padding: 20px;
+}
+.top-course .course h2 {
+  text-align: left;
+  font-size: 25px;
+  margin: 10px 0px;
+}
+.top-course .course span {
+  color: #009cff;
+}
+.top-course .course p {
+  font-size: 20px;
+}
+.top-course .course #lear {
+  color: #009cff;
+  margin: 10px 0px;
+}
+.top-course .course:hover {
+  cursor: pointer;
+}
+.top-course .course:hover #lear {
+  -webkit-text-decoration: underline #009cff;
+          text-decoration: underline #009cff;
+}
+
+main .container .bottom-course {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+main .container .bottom-course h2 {
+  text-align: left;
+}
+main .container .bottom-course .box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 150px);
+}
+main .container .bottom-course .box div {
+  width: 50%;
+  height: 330px;
+}
+main .container .bottom-course .box div p {
+  font-weight: 100;
+  color: white;
+  margin: 20px 0px;
+}
+main .container .bottom-course .box .text-box {
+  padding: calc(20px * 4) calc(20px * 2);
+}
+main .container .bottom-course .box .text-box h2 {
+  color: white;
+}
+main .container .bottom-course .box .first-box-img {
+  padding: 0;
+  background-image: url("https://www.painterartist.com/static/ptr/images/home/wacom-painter.jpg");
+  background-position: center;
+  background-size: 100%;
+}
+main .container .bottom-course .box .first-box-img .first-img {
+  width: 450px;
+}
+main .container .bottom-course .box .first-box-img p {
+  padding: 20px;
+}
+main .container .bottom-course .box .second-box-img {
+  background-image: url("https://www.painterartist.com/static/ptr/images/home/painter-master.jpg");
+  background-size: 100%;
+}
+main .container .bottom-course .box .second-box-img p {
+  margin-top: 310px;
+  padding: 20px;
+}
+main .container .bottom-course .box .third-img {
+  background-image: url("https://www.painterartist.com/static/ptr/images/home/business-education.jpg");
+  background-size: 100%;
+}
+main .container .bottom-course .first {
+  background-color: #3b0176;
+}
+main .container .bottom-course .second {
+  background-color: #2e2d2d;
+}
+main .container .bottom-course .third {
+  background-color: rgba(66, 66, 248, 0.85);
+}
+
+footer {
+  background-color: black;
+}
+footer .container .top-footer {
+  background-color: #e8e8e8;
+  height: 300px;
+  padding: calc(10px * 5) 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .container .top-footer h3 {
+  margin-bottom: 10px;
+}
+footer .container .top-footer ul li {
+  margin-bottom: 5px;
+}
+footer .container .top-footer ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .link-social {
+  position: absolute;
+  margin: 20px 0px;
+}
+footer .link-social i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+footer .link-social i:hover {
+  opacity: 0.5;
+}
+footer .link-social .inst {
+  color: #c70cb9;
+}
+footer .link-social .face {
+  color: blue;
+}
+footer .link-social .you {
+  color: red;
+}
+footer .link-social .twit {
+  color: lightseagreen;
+}
+footer .link-social .link {
+  color: #009cff;
+}
+footer .container .bottom-footer {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: black;
+}
+footer .container .bottom-footer .box-left img {
+  margin: 0px 20px;
+}
+footer .container .bottom-footer .box-left img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+footer .container .bottom-footer .box-right {
+  color: white;
+}
+footer .container .bottom-footer .box-right span {
+  margin-right: 20px;
+}
+footer .container .bottom-footer .box-right span:hover {
+  cursor: pointer;
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+
+.jumbotron button {
+  padding: 10px calc(10px * 2);
+  background-color: rgba(244, 165, 96, 0);
+  color: black;
+}
+.jumbotron #left {
+  background-color: black;
+  color: white;
+  margin-right: 10px;
+}
+
+main .container .bottom .box .text-box button {
+  padding: 10px 20px;
+  border: 0;
+}
+main .container .bottom .box .text-box button:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
